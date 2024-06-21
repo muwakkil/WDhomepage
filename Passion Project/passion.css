@@ -65,10 +65,10 @@ summary:hover {
     background-color: antiquewhite;
 }
 
-a{
+/* a{
     color:red;
     text-decoration: line-through;
-}
+} */
 
 a:hover {
     color:bisque;
