@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color:aliceblue ;
+    margin: 0;
+    font-size: 130%;
+    color: crimson;
+}
+
+
+/* img {
+    
+} */
+
+.square {
+    background-color: lightseagreen;
+    width: 200px;
+    height: 200px;
+    /* animation-name: test;
+    animation-duration: 4s;
+    animation-delay: 5s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: both; */
+
+    animation: test 4s 5s infinite alternate linear both;
+}
+
+@keyframes test {
+    0% { 
+        background: lightgoldenrodyellow;
+    }
+
+    100% {
+        background:lightcoral;
+    }
+
+}
+
+.container {
+    background-color: pink;
+    height: 100vh;
+    display: flex;
+   justify-content: space-evenly; 
+   align-items: center;
+    /* gap: 150px; */
+    position: relative;
+    /* border-radius: 100%; */
+    overflow: hidden;
+
+}
+
+.container.lower {
+    background-color: aliceblue;
+    flex-direction: column;
+}
+
+.circle {
+    background-color: lemonchiffon;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 100%;
+    animation: pulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        background: lightgoldenrodyellow;
+        /* width: 15vw;
+        height: 15vw; */
+        transform: scale(1);
+    }
+    100% {
+        background: orange;
+        /* width: 25vw;
+        height: 25vw; */
+        transform: scale(1.4);
+    }
+}
+
+.box {
+    background-color: lemonchiffon;
+    width: 15vw;
+    height: 15vw;
+    animation: spin 4s infinite linear;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+        
+    }
+    100% {
+        transform: rotate(360deg)
+        
+    }
+}
+
+.mover {
+    background-color: lemonchiffon;
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: move 4s infinite ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-1500px)
+        
+    }
+    100% {
+        transform: translateX(105vw)
+    }
+}
+
+.charger {
+    background-color: pink;
+    width: 10vw;
+    height: 10vw;
+    
+    transition:
+    background 4s,
+    border-radius 4s,
+    transform 4s;
+}
+.charger:hover {
+   /* animation: change 4s forwards; */
+
+   background-color: lemonchiffon;
+   transform: rotate(360deg);
+   border-radius: 100%;
+
+
+}
+
+@keyframes change {
+    0% {
+        background: pink;
+        transform: rotate(0);
+        border-radius: 0;
+        
+    }
+    100% {
+        background-color: lemonchiffon;
+        transform: rotate(360deg);
+        border-radius: 100%;
+    }
+}
+
+.secret {
+    position: relative;
+}
+
+.secret:hover {
+    color: fuchsia;
+    cursor: crosshair;
+}
+
+.secret:hover + .revealed {
+    display: inline;
+    opacity: 1;
+}
+.revealed {
+    position: absolute;
+    top: -55px;
+    left: -35px;
+     width: 120px;
+    padding: 10px;
+
+
+    background: fuchsia;
+    color: aliceblue;
+    
+   
+    text-align: center;
+    display: none;
+
+    pointer-events: none;
+
+}

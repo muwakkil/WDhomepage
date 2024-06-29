@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%
+}
+
+
+.container{
+    background-color: aliceblue;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top {
+    /* background-color: blanchedalmond; */
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-item {
+    background-color: darkcyan;
+    width: 100%;
+}
+
+.bottom {
+    /* background-color: bisque; */
+    height: 75%;
+    display: flex;
+    gap: 20px;
+}
+
+.left {
+    background-color: lightpink;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+}
+
+.right {
+    /* background-color: lightcoral; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-item {
+    background-color: antiquewhite;
+    height: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    background-color:aliceblue ;
+}
+
+.container{
+    background-color: antiquewhite;
+    padding: 20px;
+    display: flex;
+    height: 600px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* justify-content is for horizontal alignment on row oriented flexboxes*/
+/* justify-content: space-between; */
+
+/* alignment-items is fro vertical alignemtn on row oriented flexboxes */
+/* align-items: center; */
+
+/* align-content is for verticl alignmetn on row oriented flexboxes with wrap enabled */
+/* align-content: center;
+}
+
+.item{
+    background-color: bisque;
+    padding: 10px;
+    border: 1px solid;
+    width: 200px;
+} */ 
