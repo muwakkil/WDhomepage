@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(seashelledited.png);
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+
+  .grid-item {
+    background-color: rgba(187, 253, 245, 0.8);
+    border: 1px solid rgb(255, 0, 0);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .grid-item:hover .hidden{
+    display: block;
+
+  }
+
+  .mussel {
+    background-image: url(conchshell.jpeg);
+  }
+
+  .conch {
+    background-image: url(conchshell.jpeg)
+  }
+
+
+.style {
+    color: red;
+    text-align: center;
+    background-color: lightsalmon;
+   
+
+}
+
+
+.hide {
+    display: none;
+  }
+  
+  .myDIV:hover + .hide {
+    display: block;
+    color: red;
+  }
+

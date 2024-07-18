@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Random Images</title>
+<link rel="icon" type="image/x-icon" href="Favicon.ico">
+<style>
+body {
+margin-top: 30px;
+background: rgb(52, 96, 121);
+}
+</style> 
+</head>
+
+<script>
+	function displayRandomImages() 
+	{
+	   
+	   var imageArray = [
+	   { 
+		// armin hoffman
+		 src: "https://i.pinimg.com/originals/43/c4/7d/43c47d3e09b68d43ca15b7b1a632dbeb.jpg",
+		 
+		 width: "500",
+		 height: "500"
+	   }, 
+	   {
+		// robertbrownjohn
+		 src: "https://i.pinimg.com/564x/77/14/92/771492bbc101135b7ca3b4efb9bb63d9.jpg",
+		 width: "500",
+		 height: "500"
+		
+	   }, 
+	   {
+		 src: "https://i.pinimg.com/564x/8f/6a/92/8f6a928b762980b7db6d1ed110f8a839.jpg",
+		 width: "500",
+		 height: "500"
+		 
+	   },
+	   {
+		 src: "https://i.pinimg.com/564x/d6/96/84/d69684281f3fbcb2d6d91ca637883b86.jpg",
+		 width: "500",
+		 height: "500"
+		 
+		} ];
+		
+		//find the length of the array of images
+		var arrayLength = imageArray.length;
+		var newArray = [];
+		for (var i = 0; i < arrayLength; i++) {
+			newArray[i] = new Image();
+			newArray[i].src = imageArray[i].src;
+			newArray[i].width = imageArray[i].width;
+			newArray[i].height = imageArray[i].height;
+		}
+    //find the length of the array of images
+    var arrayLength = imageArray.length;
+    var newArray = [];
+    for (var i = 0; i < arrayLength; i++) {
+        newArray[i] = new Image();
+        newArray[i].src = imageArray[i].src;
+        newArray[i].width = imageArray[i].width;
+        newArray[i].height = imageArray[i].height;
+    }
+   
+  // create random image number
+  function getRandomNum(min, max) 
+  {
+      // generate and return a random number for the image to be displayed 
+      imgNo = Math.floor(Math.random() * (max - min + 1)) + min;
+      return newArray[imgNo];
+  }  
+
+  // 0 is first image and (preBuffer.length - 1) is last image of the array
+  var newImage = getRandomNum(0, newArray.length - 1);
+ 
+  // remove the previous images
+  var images = document.getElementsByTagName('img');
+  var l = images.length;
+  for (var p = 0; p < l; p++) {
+     images[0].parentNode.removeChild(images[0]);
+  }
+  // display the new random image  
+  document.body.appendChild(newImage);
+}
+
+
+</script>
+
+<body>
+<div>
+<center>
+<h2 style="color:rgb(0, 22, 50)"> Random Images </h2>
+<h4> Current images of inspiration. </h4>
+<button onclick="displayRandomImages();"> Display Images </button>
+</center> 
+</div>
+</body>
+</html>
+

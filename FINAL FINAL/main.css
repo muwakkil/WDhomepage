@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(52, 96, 121);
+
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+
+  .grid-item {
+    background-color: rgba(187, 253, 245, 0.8);
+    border: 1px solid rgba(44, 149, 137, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 490px;
+    height: 250px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* .hidden {
+    display: none;
+  }
+
+  .grid-item:hover .hidden{
+    display: block;
+
+  } */
+
+  .books {
+    background-image: url(images/IMG_1.JPG);
+  }
+
+  .clouds {
+    background-image: url(images/IMG_2.JPG);
+  }
+.coffee{ 
+    background-image: url(images/IMG_3.JPG);
+}
+.light {
+    background-image: url(images/IMG_4.JPG);
+}
+.lilies {
+    background-image: url(images/IMG_11.jpg);
+}
+
+.tulips {
+    background-image: url(images/IMG_6.jpg);
+}
+
+.tile{
+    background-image: url(images/IMG_12.JPG);
+}
+
+.orchids{
+    background-image: url(images/IMG_8.JPG);
+}
+
+.writing{
+    background-image: url(images/IMG_10.jpg);
+}
+
+
+.style {
+    color: rgba(44, 149, 137, 0.8);
+    text-align: center;
+    background-color: rgb(3, 33, 83);
+   
+
+}
