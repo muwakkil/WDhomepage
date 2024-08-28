@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "images/IMG_21.jpg",
         "images/IMG_22.jpg",
         "images/IMG_23.jpg",
-        // Add more image paths as needed
+        
     ];
 
     // Function to get a random image and remove it from the array

@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(255, 202, 244);
+    font-family: sans-serif;
+   
+   text-align: center;
+}
+
+.button-container {
+    position: fixed; 
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.button-container .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "Source Code Pro", monospace;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #01223a;
+    color: white;
+    text-decoration: none; /* Remove underline from anchor tag */
+    text-align: center;
+    display: inline-block;
+}
+
+.button-container .button:hover {
+    background-color: #08395c;
+}

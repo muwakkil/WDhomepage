@@ -1,0 +1,104 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  background-color: #9cbfd7;
+  flex-direction: column;
+}
+
+/* Header styling */
+header {
+  background-color: #eff8ff;
+  padding: 40px 20px; /* Increase padding for more space */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header h1 {
+  margin: 20px 0 0 0;
+  font-size: 36px; /* Larger font size for the header */
+  font-family: "Source Code Pro", monospace;
+}
+
+
+
+.button-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #eff8ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.button-container button,
+.button-container a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #01223a;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Remove underline from anchor tag */
+  text-align: center;
+  display: inline-block; /* Make anchor tag behave like a button */
+}
+
+.button-container button:hover,
+.button-container a:hover {
+  background-color: #08395c;
+}
+
+/* Main content styling */
+main {
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling in main content */
+  margin-top: 85px; /* Add margin to avoid overlapping with fixed header */
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2px; 
+  width: 100vw;
+  height: 100vh;
+  padding: 2px; 
+  box-sizing: border-box;
+  overflow: auto;
+  margin-top: 60px;
+}
+
+.grid-item {
+  background-color: #fff;
+  border: 0 solid #ddd;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
