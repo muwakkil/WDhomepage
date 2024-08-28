@@ -11,7 +11,7 @@ html, body {
 /* Header styling */
 header {
   background-color: #eff8ff;
-  padding: 40px 20px; /* Increase padding for more space */
+  padding: 20px 10px; /* Increase padding for more space */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-bottom: 2px solid #ddd;
@@ -24,8 +24,8 @@ header {
 }
 
 header h1 {
-  margin: 20px 0 0 0;
-  font-size: 36px; /* Larger font size for the header */
+  margin: 10px 0 0 0;
+  font-size: 24px; /* Larger font size for the header */
   font-family: "Source Code Pro", monospace;
 }
 
@@ -33,15 +33,17 @@ header h1 {
 
 .button-container {
   position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 60px;
+  /* left: 0;
+  right: 0; */
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 10px;
   background-color: #eff8ff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .button-container button,
@@ -78,13 +80,13 @@ main {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  /* grid-template-rows: repeat(auto-fill, minmax(250px, 1fr)); */
   gap: 2px; 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  /* height: 100vh; */
   padding: 2px; 
   box-sizing: border-box;
-  overflow: auto;
+  /* overflow: auto; */
   margin-top: 60px;
 }
 
@@ -101,4 +103,42 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px; /* Smaller font size for tablets and smaller devices */
+  }
+
+  .button-container button,
+  .button-container a {
+    margin: 5px;
+    padding: 8px 14px;
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns for smaller screens */
+    gap: 5px; /* Adjust gap */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px; /* Even smaller font size for mobile phones */
+  }
+
+  .button-container button,
+  .button-container a {
+    margin: 3px;
+    padding: 6px 12px;
+    font-size: 10px; /* Even smaller font size */
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Very small columns for mobile */
+    gap: 2px; /* Smaller gap */
+  }
 }
