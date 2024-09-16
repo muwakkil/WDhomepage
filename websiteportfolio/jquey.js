@@ -153,4 +153,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Populate the grid initially
     populateGrid();
+    document.addEventListener("DOMContentLoaded", function() {
+    const sidePanel = document.getElementById("side-panel");
+    const toggleButton = document.getElementById("toggle-panel");
+
+    toggleButton.addEventListener("click", function() {
+        if (sidePanel.classList.contains("open")) {
+            sidePanel.classList.remove("open");
+        } else {
+            sidePanel.classList.add("open");
+        }
+    });
+});
 });
