@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "images/IMG_15.jpg",
             "images/IMG_16.jpg",
             "images/IMG_17.jpg",
-            "images/IMG_18.jpg",
+            "images/IMG_18.JPG",
             "images/IMG_19.jpeg",
             "images/IMG_20.jpeg",
             "images/IMG_21.jpg",
