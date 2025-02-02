@@ -1,113 +1,105 @@
 html, body {
   height: 100%;
   margin: 0;
-  display: flex;
-  background-color: #9cbfd7;
-  flex-direction: column;
+  padding: 0; /* Ensure no extra padding is added by default */
+  background-color: #280404;
 }
 
-/* Header styling
+/* Header styling */
 header {
-  background-color: #eff8ff;
-  padding: 20px 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-  width: calc(100% - 300px); /* Adjust width to account for side panel */
-  /* position: fixed;
-  top: 0;
-  left: 300px; /* Align with side panel */
-  /* z-index: 1000; 
-} */
-
-/* header h1 {
-  margin: 10px 0 0 0;
-  font-size: 24px;
-  font-family: "Source Code Pro", monospace;
-} */
-
-/* Side panel styling */
-#side-panel {
-  position: fixed;
+  position: fixed; /* Fix header at the top */
   top: 0;
   left: 0;
-  width: 300px; /* Width of the sidebar */
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  overflow-y: auto;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align items to the start vertically */
-  background-color: #d4e8f7;
-  font-family: "Source Code Pro", monospace;
+  right: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color:#280404; /* Optional: Semi-transparent background */
+  text-align: center;
+/* Adjust padding as needed */
+  margin: 0; /* Remove margin
 }
 
-/* Side panel image styling */
-.side-panel-img {
-  width: 60%; /* Full width of the side panel */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 320px; /* Adjust to your preferred maximum height */
-  border-radius: 5px; /* Optional: rounded corners */
-  margin-bottom: 20px; /* Space between image and content */
+header h1 {
+   margin: 0; /* Remove default margin */
+   font-size: 24px; /* Adjust font size as needed */
+   font-family: "Source Code Pro", monospace;
+ }
+
+ main {
+  margin-top: 50px; /* Adjust this margin to match the header height */
+  overflow-y: auto; /* Allow scrolling in main content */
 }
 
 
-/* Button container styling */
+
 .button-container {
-  display: flex;
-  flex-direction: column; /* Arrange buttons vertically */
-  gap: 10px;
+  position: fixed; 
+  top: 10px;
+  left: 0;
+  right: 0; 
   width: 100%;
-  padding: 10px;
-  box-shadow: none; /* Remove shadow */
-  margin-top: 20px; /* Space from other content */
+  display: flex;
+  justify-content: center;
+  /* padding: 10px; */
+background-color: #280404;
+ 
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .button-container button,
 .button-container a {
-  margin: 0;
-  padding: 10px 20px;
+  margin: 0 100px;
+  padding: 5px 20px;
   font-size: 16px;
   font-family: "Source Code Pro", monospace;
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #01223a;
-  color: white;
+  background-color: #150303;
+  color: rgb(230, 211, 182);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
+  text-decoration: none; /* Remove underline from anchor tag */
   text-align: center;
-  display: inline-block;
+  display: inline-block; /* Make anchor tag behave like a button */
 }
 
 .button-container button:hover,
 .button-container a:hover {
-  background-color: #08395c;
+  background-color: #150303;
 }
 
 /* Main content styling */
 main {
   flex: 1;
-  overflow-y: auto;
-  margin-top: 0; /* Remove margin to align with the top of the page */
-  margin-left: 300px; /* Adjust for the width of the side panel */
- 
-  padding: 0;
+  overflow-y: auto; /* Allow scrolling in main content */
+  margin-top: 50px; /* Add margin to avoid overlapping with fixed header */
 }
 
-/* Grid container styling */
+
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2px;
+  /* grid-template-rows: repeat(auto-fill, minmax(250px, 1fr)); */
+  gap: 1px; 
   width: 100%;
-  padding: 2px;
+  /* height: 100vh; */
+  padding: 1px; 
   box-sizing: border-box;
-  margin: 0;
+  /* overflow: auto; */
+  margin-top: 0;
+  height: auto;
+}
+
+
+.grid-overlay {
+  position: absolute; /* Position the overlay absolutely within the grid-container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(211, 150, 128, 0.536); /* Adjust the color and opacity */
+  z-index: 1; /* Ensure it's above the grid items */
 }
 
 .grid-item {
@@ -125,62 +117,61 @@ main {
   display: block;
 }
 
+
 /* Media Queries */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 20px; /* Smaller font size for tablets and smaller devices */
+  }
+
   .button-container button,
   .button-container a {
     margin: 5px;
     padding: 8px 14px;
-    font-size: 12px;
+    font-size: 12px; /* Smaller font size */
   }
 
   .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 5px;
-  }
-
-  #side-panel {
-    width: 250px; /* Adjust for smaller screens */
-  }
-
-  main {
-    margin-left: 250px; /* Adjust for the smaller side panel */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns for smaller screens */
+    gap: 5px; /* Adjust gap */
   }
 }
 
 @media (max-width: 480px) {
+  header h1 {
+    font-size: 18px; /* Even smaller font size for mobile phones */
+  }
+
   .button-container button,
   .button-container a {
     margin: 3px;
     padding: 6px 12px;
-    font-size: 10px;
+    font-size: 10px; /* Even smaller font size */
   }
 
   .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 2px;
-  }
-
-  #side-panel {
-    width: 200px; /* Adjust for very small screens */
-  }
-
-  main {
-    margin-left: 200px; /* Adjust for the very small side panel */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Very small columns for mobile */
+    gap: 2px; /* Smaller gap */
   }
 }
 
-/* Add the new styles for the sidebar paragraph here */
-#side-panel p {
-  font-size: 11px; /* Adjust the font size as needed */
-  line-height: 1.5; /* Adjust line height for better readability */
-  color: #333; /* Optional: adjust text color for contrast */
-  text-align: center;
+/* Ensure the name overlay covers the entire viewport */
+.name-overlay {
+  position: fixed; /* Fixed positioning to stay in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 2000; /* High z-index to stay on top of other content */
+  background: transparent; /* Transparent background */
 }
-#side-panel .side-panel-header {
-  font-size: 35px; /* Increase font size */
+
+.name-text {
+  font-size: 190px; /* Adjust font size as needed */
   font-weight: bold; /* Make the text bold */
-  margin-bottom: 20px; /* Space below the header */
-  text-align: center; /* Center the header text */
-  color: #01223a; /* Optional: change the text color */
+  color: #150303; /* Text color */
+  font-family: "Source Code Pro", monospace; /* Font family */
 }

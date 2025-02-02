@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "images/IMG_20.jpeg",
             "images/IMG_21.jpg",
             "images/IMG_22.jpg",
-            "images/IMG_23.jpg",
+            
             "images/IMG_24.jpeg",
             "images/IMG_25.jpg",
             "images/IMG_26.jpg",
